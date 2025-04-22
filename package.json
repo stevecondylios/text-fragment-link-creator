@@ -1,0 +1,16 @@
+{
+  "name": "selected-text-to-text-fragment-link",
+  "version": "1.0.0",
+  "description": "Chrome extension to create text fragment links from selected text",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chrome-extension",
+    "text-fragment",
+    "link"
+  ],
+  "author": "",
+  "license": "MIT"
+}

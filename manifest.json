@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Text Fragment Link Creator",
+  "version": "1.0",
+  "description": "Create URL with text fragment from selected text",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "Create Text Fragment Link",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+T"
+      },
+      "description": "Create Text Fragment Link"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "options_page": "options.html"
+}
