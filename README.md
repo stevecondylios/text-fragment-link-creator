@@ -7,14 +7,14 @@ A Chrome extension that creates a link to the current page with a text fragment 
 - Creates a URL with a text fragment that points to the selected text
 - Can be activated via:
   - Extension button in toolbar
-  - Keyboard shortcut: Alt+Shift+T
+  - Keyboard shortcut: Alt + Shift + T (Opt + Shift + T on macOS)
 - Copies the link to your clipboard
 - Displays a notification when the link is copied
 
 ## Installation
 
 1. Visit the [Chrome Web Store](https://chrome.google.com/webstore/)
-2. Search for "Refresh Site Cookies"
+2. Search for "Text Fragment Link Creator"
 3. Click "Add to Chrome"
 
 ### Manual Installation
