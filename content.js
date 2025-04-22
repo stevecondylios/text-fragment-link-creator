@@ -15,15 +15,25 @@
     return;
   }
   
-  // Create text fragment
+  // Create text fragment based on length
   // Format: #:~:text=[prefix-,]textStart[,textEnd][,-suffix]
-  // For simplicity, we're just using the full selected text
-  const escapedText = encodeURIComponent(selectedText);
+  let textFragmentPart;
+  
+  if (selectedText.length <= 200) {
+    // For text under 200 chars, use the whole text
+    textFragmentPart = encodeURIComponent(selectedText);
+  } else {
+    // For longer text, use start and end approach (each up to 100 chars)
+    const textStart = selectedText.substring(0, 100);
+    const textEnd = selectedText.substring(selectedText.length - 100);
+    
+    textFragmentPart = `${encodeURIComponent(textStart)},${encodeURIComponent(textEnd)}`;
+  }
   
   // Create the URL with the text fragment
   let url = new URL(window.location.href);
   url.hash = '';  // Remove any existing hash/fragment
-  const textFragmentUrl = `${url.toString()}#:~:text=${escapedText}`;
+  const textFragmentUrl = `${url.toString()}#:~:text=${textFragmentPart}`;
   
   // Copy to clipboard
   navigator.clipboard.writeText(textFragmentUrl)
