@@ -2,6 +2,11 @@
 
 A Chrome extension that creates a link to the current page with a text fragment that highlights the selected text.
 
+Select text and press Shift + Opt + T to generate a URL linking to that selected text fragment (will automatically be on clipboard).
+
+<img src="images/text-fragment.gif">
+
+
 ## Features
 
 - Creates a URL with a text fragment that points to the selected text
